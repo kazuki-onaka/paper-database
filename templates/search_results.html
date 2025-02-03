@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>検索結果</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>検索結果</header>
+
+    <div class="container">
+        <h1>検索結果</h1>
+
+        {% if results %}
+            <div class="grid-container">
+                {% for result in results %}
+                <div class="grid-item title">
+                    <a href="{{ url_for('paper_detail', paper_id=result[0]) }}">{{ result[1] }}</a>
+                    <p class="author-year">{{ result[2] }} ({{ result[3] }})</p>
+                </div>
+                <div class="grid-item summary">
+                    <p>{{ result[5] }}</p> <!-- 要約部分 -->
+                </div>
+                {% endfor %}
+            </div>
+
+            <!-- ページネーション -->
+            <div class="pagination">
+                {% if page > 1 %}
+                    <a href="{{ url_for('search_paper', query=query, page=page-1) }}">前のページ</a>
+                {% endif %}
+                <span>ページ {{ page }} / {{ total_pages }}</span>
+                {% if page < total_pages %}
+                    <a href="{{ url_for('search_paper', query=query, page=page+1) }}">次のページ</a>
+                {% endif %}
+            </div>
+        {% else %}
+            <p>該当する論文が見つかりませんでした。</p>
+        {% endif %}
+
+        <br>
+        <a href="/">ホームに戻る</a>
+    </div>
+</body>
+</html>

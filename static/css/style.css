@@ -1,0 +1,150 @@
+/* 全体のスタイル設定 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* ヘッダー */
+header {
+    background: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+/* メインコンテンツ */
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* フォームのスタイル */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="submit"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background: #45a049;
+}
+
+/* リンクボタン */
+a {
+    text-decoration: none;
+    color: white;
+    background: #4CAF50;
+    padding: 10px 20px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+a:hover {
+    background: #45a049;
+}
+
+/* テーブルスタイル */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* 検索結果をグリッドで表示 */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* 左：タイトル、右：要約 */
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.grid-item {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item.title {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+}
+
+.grid-item.title a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.grid-item.title a:hover {
+    text-decoration: underline;
+}
+
+.grid-item.summary {
+    font-size: 16px;
+    line-height: 1.6;
+    white-space: pre-wrap; /* 改行を保持 */
+}
+
+.author-year {
+    font-size: 14px;
+    color: #666;
+}
+
+/* ページネーション */
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination a {
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    margin: 5px;
+    display: inline-block;
+}
+
+.pagination a:hover {
+    background-color: #0056b3;
+}

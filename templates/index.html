@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>論文管理システム</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>論文管理システム</header>
+
+    <div class="container">
+        <h1>ようこそ！</h1>
+        <p>このシステムでは、論文を検索し、詳細情報を閲覧することができます。</p>
+
+        <!-- 検索ページへのリンク -->
+        <a href="{{ url_for('search_paper') }}">論文を検索する</a>
+    </div>
+</body>
+</html>

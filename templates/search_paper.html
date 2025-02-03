@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>論文検索</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>論文検索</header>
+
+    <div class="container">
+        <h1>論文を検索</h1>
+        <form action="/search" method="POST">
+            <label for="query">検索ワード（タイトル、著者、発行年、キーワード）:</label>
+            <input type="text" name="query" required>
+            <button type="submit">検索</button>
+        </form>
+
+        <br>
+        <a href="/">ホームに戻る</a>
+    </div>
+</body>
+</html>
